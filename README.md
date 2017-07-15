@@ -68,7 +68,7 @@ Only relevant data is shown to the user and unnecessary details are hidden.
 ### Examples
 
 | Language        | Paradigm      | Execution                   | Typing            | Memory Management |
-| - - - - - - - - | - - - - - - - | - - - - - - - - - - - - - - | - - - - - - - - - | - - - - - - - - - |
+| --------------- | ------------- | --------------------------- | ----------------- | ----------------- |
 | **JavaScript**  | imperative OO | interpreted                 | dynamic & weak    | automatic         |
 | **Python**      | imperative OO | interpreted                 | dynamic & strong  | automatic         |
 | **Ruby**        | imperative OO | interpreted                 | dynamic & strong  | automatic         |
