@@ -2,6 +2,78 @@
 // - JavaScript functions (named, anonymous, class/object methods)
 // - JavaScript classes (ES5 Object Constructors and ES6 Classes) and objects/instances
 
+
+////// ////// ////// CARDS ////// ////// //////
+
+class Card {
+  // var self = this;
+  constructor (suit, value) {
+    var stringVal = ["Ace", "2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", "King"];
+    this.suit = suit;
+    this.value = value;
+    this.faceValue = stringVal[value] + " of " + suit;
+  }
+}
+
+class Deck {
+  // var this = this;
+  constructor () {
+    this.cards = [];
+    this.reset();
+  }
+  reset () {
+    var suits = ["Hearts","Diamonds","Spades","Clubs"];
+    var len = suits.length;
+    for (let i = 0; i < len; i++) {
+      for (let j = 0; j < 13; j++) {
+        this.cards.push(new Card(suits[i], j));
+      }
+    }
+  }
+  deal () {
+    if (this.cards.length > 0) {
+      // topCard = this.cards[0];
+      return this.cards.shift();
+    }
+  }
+  shuffle () {
+    var len = this.cards.length;
+    for (let i = 0; i < len; i++) {
+      var randInd = Math.floor(Math.random()*len);
+      var temp = this.cards[randInd];
+      this.cards[randInd] = this.cards[i];
+      this.cards[i] = temp;
+    }
+  }
+}
+
+class Player {
+  constructor (name) {
+    this.name = name;
+    this.hand = [];
+  }
+  draw (deck) {
+    this.hand.push(deck.deal());
+    return this;
+  }
+  discard (index) {
+    this.hand.splice(index,1);
+    return this;
+  }
+}
+
+var myDeck = new Deck();
+myDeck.shuffle();
+var erica = new Player("Erica");
+console.log(erica);
+erica.draw(myDeck).draw(myDeck).draw(myDeck);
+console.log(erica);
+erica.draw(myDeck).discard(1).discard(20);
+console.log(erica);
+
+
+////// ////// ////// CARDS ////// ////// //////
+
 // Write named functions
 
 function sum(x,y){

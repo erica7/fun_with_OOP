@@ -1,9 +1,75 @@
 # OOP with Python
 
+import random
+
 # Create a class with keyword `class`.
 # __init__() method is a 'magic method' that is automatically created and invoked when a new instance is created.
 # self refers to a specific instance.
 # "return self" returns its own instance; this allows methods to be chained.
+
+
+###### ###### ###### CARDS ###### ###### ######
+
+class Card(object):
+    def __init__(self, suit, value):
+        stringVal = ["Ace", "2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", "King"];
+        self.suit = suit;
+        self.value = value;
+        self.faceValue = stringVal[value] + " of " + self.suit;
+
+class Deck(object):
+    def __init__(self):
+        self.cards = []
+        self.reset()
+    def reset(self):
+        suits = ["Hearts","Diamonds","Spades","Clubs"]
+        for suit in suits:
+            for i in range(0, 13):
+                self.cards.append(Card(suit, i))
+        return self
+    def deal(self):
+        if len(self.cards) > 0:
+            top_card = self.cards[0]
+            self.cards.pop(0)
+            return top_card
+        return null
+    def shuffle(self):
+        for card in self.cards:
+            rand_i = random.randint(0, len(self.cards)-1)
+            temp = self.cards[rand_i]
+            self.cards[rand_i] = card
+            card = temp
+        return self
+
+class Player(object):
+    def __init__(self, name = "Anonymous Player"):
+        self.name = name
+        self.hand = []
+    def draw(self, deck):
+        self.hand.append(deck.deal())
+        return self
+    def discard(self, i):
+        if i < len(self.hand):
+            temp = self.hand[i]
+            self.hand.pop(i)
+        return self
+    def print_hand(self):
+        print self.name + "'s hand:"
+        for each in self.hand:
+            print each.faceValue
+
+my_deck = Deck()
+my_deck.shuffle()
+erica = Player("Erica")
+print erica.name
+erica.print_hand()
+erica.draw(my_deck).draw(my_deck).draw(my_deck)
+erica.print_hand()
+erica.discard(10).discard(2)
+erica.print_hand()
+
+###### ###### ###### CARDS ###### ###### ######
+
 
 class Car(object):
     def __init__(self, price, speed, fuel, mileage):
