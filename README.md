@@ -76,3 +76,5 @@ Only relevant data is shown to the user and unnecessary details are hidden.
 | **Java**        | imperative OO | compiled (to Java bytecode) | static & strong   | automatic         |
 | **C#**          | imperative OO | compiled                    | static & strong   | automatic         |
 | **C++**         | imperative OO | compiled                    | static & weak     | manual            |
+| **Swift**       | imperative OO | compiled                    | static & strict   | automatic         |
+| **Objective-C** | imperative OO | compiled                    | static & weak     | automatic         |
