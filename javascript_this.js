@@ -57,12 +57,12 @@ var child = new ChildClass("child name");
 console.log(parent.getContext());
 console.log(child.getContext());
 
-parent.changeName();
+child.changeName();
 
-console.log(parent.getContext());
+console.log(parent.getContext());  // note that changing the name of the child instance does not change the name of the parent instance 
 console.log(child.getContext());
 
-child.changeName();
+parent.changeName();
 
 console.log(parent.getContext());
 console.log(child.getContext());

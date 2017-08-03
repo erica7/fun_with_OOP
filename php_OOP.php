@@ -29,7 +29,7 @@ class Card
   {
     if (property_exists($this, $property))
     {
-      $this->$property = $value;
+      $this->property = $value;
     }
     return $this;
   }
@@ -55,7 +55,7 @@ class Deck
   {
     if (property_exists($this, $property))
     {
-      $this->$property = $value;
+      $this->property = $value;
     }
     return $this;
   }
@@ -109,7 +109,7 @@ class Player
   {
     if (property_exists($this, $property))
     {
-      $this->$property = $value;
+      $this->property = $value;
     }
     return $this;
   }
@@ -162,7 +162,7 @@ class Mammal
   {
     if (property_exists($this, $property))
     {
-      $this->$property = $value;
+      $this->property = $value;
     }
     return $this;
   }
