@@ -1,4 +1,0 @@
-/Users/wildcard/Documents/git_repos/fun_with_OOP/bin/Debug/netcoreapp1.1/fun_with_OOP.deps.json
-/Users/wildcard/Documents/git_repos/fun_with_OOP/bin/Debug/netcoreapp1.1/fun_with_OOP.runtimeconfig.json
-/Users/wildcard/Documents/git_repos/fun_with_OOP/bin/Debug/netcoreapp1.1/fun_with_OOP.runtimeconfig.dev.json
-/Users/wildcard/Documents/git_repos/fun_with_OOP/obj/Debug/netcoreapp1.1/fun_with_OOP.AssemblyInfo.cs
