@@ -1,5 +1,5 @@
 // OOP with C#
-// note: run with `dotnet run` command; uses `csharp_objects.csproj` file and `bin` and `obj` directories
+// note: `dotnet restore` command in directory containing 'csharp_objects.cs' and 'csharp_objects.csproj'. `dotnet run` command.
 
 using System;
 using System.Collections.Generic;
